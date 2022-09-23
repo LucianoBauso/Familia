@@ -1,0 +1,35 @@
+{% extends "./index.html" %}
+
+{% block title %} <h1>
+    Familia
+</h1> {% endblock %}
+
+{% block tablas %}
+
+<div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>Listado de Integrantes</h1>
+        <div class="table-responsive py-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>edad</th>
+                        <th>nombre</th>
+                        <th>apellido</th>
+                        <th>fecha_nacimiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for x in integrante%}
+                    <tr>
+                        <td>{{x.edad}}</td>
+                        <td>{{x.nombre}}</td>
+                        <td>{{x.apellido}}</td>
+                        <td>{{x.fecha_nacimiento}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "./index.html" %}
+
+{% block title %} Familia {% endblock %}
+
+{% block tablas %}
+
+<div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>Listado de Autos</h1>
+        <div class="table-responsive py-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>patente</th>
+                        <th>modelo</th>
+                        <th>año</th>
+                        <th>color</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for x in auto%}
+                    <tr>
+                        <td>{{x.patente}}</td>
+                        <td>{{x.modelo}}</td>
+                        <td>{{x.anio}}</td>
+                        <td>{{x.color}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
